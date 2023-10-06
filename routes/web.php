@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,11 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/', [TestController::class,'index'] );
+Route::get('/', function(){
+    return view('welcome');
+} );
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class,'dashboard'])->name('dashboard');
+Route::get('/sia', [App\Http\Controllers\SIARefController::class,'index'])->name('sia.index');
 
-Route::get('/dashboard', [TestController::class,'dashboard']);
+Route::get('/sia/create', [App\Http\Controllers\SIARefController::class,'create'])->name('sia.create');
+Route::post('/sia/create', [App\Http\Controllers\SIARefController::class,'store'])->name('sia.store');
