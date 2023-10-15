@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SIARefController;
+use App\Http\Controllers\DashboardController;
+
 
 
 /*
@@ -17,8 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('welcome');
 } );
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class,'dashboard'])->name('dashboard');
-Route::get('/sia', [App\Http\Controllers\SIARefController::class,'index'])->name('sia.index');
+Route::get('/dashboard', [DashboardController::class,'dashboard'])->name('dashboard');
+Route::get('/sia', [SIARefController::class,'index'])->name('sia.index');
 
-Route::get('/sia/create', [App\Http\Controllers\SIARefController::class,'create'])->name('sia.create');
-Route::post('/sia/create', [App\Http\Controllers\SIARefController::class,'store'])->name('sia.store');
+Route::get('/s', [SIARefController::class,'create'])->name('sia.create');
+Route::post('/s', [SIARefController::class,'store'])->name('sia.store');
+
+Route::get('/form',[FormController::class,'index'])->name('contoh.form');

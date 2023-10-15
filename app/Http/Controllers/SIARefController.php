@@ -32,6 +32,7 @@ class SIARefController extends Controller
         $validatedData = $request->validate([
             'siaRef_kod' => 'required',
             'siaRef_desc' => 'required',
+            'created_at' => 'required',
             'created_by' => 'required',
             'updated_by' => 'required',
             

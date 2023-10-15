@@ -8,7 +8,6 @@
 
 @section('content')
 
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -17,7 +16,7 @@
                         <h3 class="card-title">SIA Ref List</h3>
                     </div>
                     
-                    <a href="{{ route('sia.create') }}" class="btn btn-primary my-3 py-2" >Create New SIA</a>
+                    <a href="{{ route('sia.create') }}" class="btn btn-primary my-4 py-2" >Create New SIA</a>
                    
                     <table class="table mt-2">
                         <thead>
@@ -33,15 +32,16 @@
                                 <tr>
                                     <td>{{ $sIARef->siaRef_ID }}</td>
                                     <td>{{ $sIARef->siaRef_kod }}</td>
-                                    <td>{{ $sIARef->description }}</td>
+                                    <td>{{ $sIARef->siaRef_desc }}</td>
+                                    <td>{{ $sIARef->created_at }}</td>
                                     <td>
-                                        <a href="{{ route('sia.show', $sIARef->siaRef_ID) }}" class="btn btn-info">View</a>
-                                        <a href="{{ route('sia.edit', $sIARef->siaRef_ID) }}" class="btn btn-primary">Edit</a>
-                                        <form action="{{ route('sia.destroy', $sIARef->siaRef_ID) }}" method="POST">
+                                        {{-- <a href="{{ route('sia.show', $sIARef->siaRef_ID) }}" class="btn btn-info">View</a> --}}
+                                        {{-- <a href="{{ route('sia.edit', $sIARef->siaRef_ID) }}" class="btn btn-primary">Edit</a> --}}
+                                        {{-- <form action="{{ route('sia.destroy', $sIARef->siaRef_ID) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">Delete</button>
-                                        </form>
+                                        </form> --}}
                                     </td>
                                 </tr>
                             @endforeach

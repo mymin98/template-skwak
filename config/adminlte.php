@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
-    'logo_img_xl' => null,
-    'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+    'logo' => '',
+    'logo_img' => 'vendor/adminlte/dist/img/jatakuskop.png',
+    'logo_img_class' => 'brand-image elevation-3',
+    'logo_img_xl' => 'vendor/adminlte/dist/img/jatakuskopxl.png',
+    'logo_img_xl_class' => 'brand-image-xl',
+    'logo_img_alt' => 'skwak',
 
     /*
     |--------------------------------------------------------------------------
@@ -107,13 +107,13 @@ return [
     */
 
     'preloader' => [
-        'enabled' => true,
+        'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/jatakuskop.png',
             'alt' => 'AdminLTE Preloader Image',
-            'effect' => 'animation__shake',
-            'width' => 60,
-            'height' => 60,
+            'effect' => 'animation_wobble',
+            'width' => 150,
+            'height' => 100,
         ],
     ],
 
@@ -192,7 +192,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-light-primary bg-info elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -291,108 +291,26 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
+        
+        
 
         // Sidebar items:
-        
+        ['header' => 'NI CONTOH PAGES',],
         [
             'text' => 'Dashboard',
-            'url' => 'dashboard',
+            // 'url' => 'dashboard',
+            'route' => 'dashboard',
         ],
 
         [
             'text' => 'SIA Ref',
             'url' => 'sia',
         ],
-    //     [
-    //         'type' => 'sidebar-menu-search',
-    //         'text' => 'search',
-    //     ],
-    //     [
-    //         'text' => 'blog',
-    //         'url'  => 'admin/blog',
-    //         'can'  => 'manage-blog',
-    //     ],
-    //     [
-    //         'text'        => 'pages',
-    //         'url'         => 'admin/pages',
-    //         'icon'        => 'far fa-fw fa-file',
-    //         'label'       => 4,
-    //         'label_color' => 'success',
-    //     ],
-    //     ['header' => 'account_settings'],
-    //     [
-    //         'text' => 'profile',
-    //         'url'  => 'admin/settings',
-    //         'icon' => 'fas fa-fw fa-user',
-    //     ],
-    //     [
-    //         'text' => 'change_password',
-    //         'url'  => 'admin/settings',
-    //         'icon' => 'fas fa-fw fa-lock',
-    //     ],
-    //     [
-    //         'text'    => 'multilevel',
-    //         'icon'    => 'fas fa-fw fa-share',
-    //         'submenu' => [
-    //             [
-    //                 'text' => 'level_one',
-    //                 'url'  => '#',
-    //             ],
-    //             [
-    //                 'text'    => 'level_one',
-    //                 'url'     => '#',
-    //                 'submenu' => [
-    //                     [
-    //                         'text' => 'level_two',
-    //                         'url'  => '#',
-    //                     ],
-    //                     [
-    //                         'text'    => 'level_two',
-    //                         'url'     => '#',
-    //                         'submenu' => [
-    //                             [
-    //                                 'text' => 'level_three',
-    //                                 'url'  => '#',
-    //                             ],
-    //                             [
-    //                                 'text' => 'level_three',
-    //                                 'url'  => '#',
-    //                             ],
-    //                         ],
-    //                     ],
-    //                 ],
-    //             ],
-    //             [
-    //                 'text' => 'level_one',
-    //                 'url'  => '#',
-    //             ],
-    //         ],
-    //     ],
-    //     ['header' => 'labels'],
-    //     [
-    //         'text'       => 'important',
-    //         'icon_color' => 'red',
-    //         'url'        => '#',
-    //     ],
-    //     [
-    //         'text'       => 'warning',
-    //         'icon_color' => 'yellow',
-    //         'url'        => '#',
-    //     ],
-    //     [
-    //         'text'       => 'information',
-    //         'icon_color' => 'cyan',
-    //         'url'        => '#',
-    //     ],
+        ['header' => 'NI CONTOH BARANG2 YG NK PAKAI',],
+        [
+            'text' => 'Form',
+            'url' => 'form',
+        ],
     ],
 
     /*

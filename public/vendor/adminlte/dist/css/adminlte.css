@@ -14166,6 +14166,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   opacity: 1;
   position: absolute;
   visibility: visible;
+  
 }
 
 .logo-xs.brand-image-xs,
@@ -14176,7 +14177,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .logo-xs.brand-image-xl,
 .logo-xl.brand-image-xl {
-  left: 12px;
+  left: 18px;
   top: 6px;
 }
 

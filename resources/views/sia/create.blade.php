@@ -34,6 +34,11 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="created_at">Created by</label>
+                                <input type="date" class="form-control" name="created_at" id="created_at"
+                                    placeholder="Created by">
+                            </div>
+                            <div class="form-group">
                                 <label for="created_by">Created by</label>
                                 <input type="text" class="form-control" name="created_by" id="created_by"
                                     placeholder="Created by">
